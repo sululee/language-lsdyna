@@ -2,7 +2,9 @@
   "dependencies": {},
   "description": "lsdyna language support for Atom",
   "devDependencies": {},
-  "engines": {"atom": ">=1.0.0 <2.0.0"},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
   "homepage": "https://github.com/sululee/language-lsdyna#readme",
   "keywords": [
     "lsdyna"
@@ -16,5 +18,5 @@
     "type": "git",
     "url": "git+https://github.com/sululee/language-lsdyna.git"
   },
-  "version": "0.0.0"
+  "version": "0.1.0"
 }
