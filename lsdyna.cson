@@ -1,0 +1,74 @@
+'scopeName': 'source.lsdyna'
+'name': 'LS-DYNA'
+'fileTypes': [
+  'k'
+  'key'
+]
+'patterns': [
+  { 'include': '#comments' }
+  { 'include': '#numbers' }
+  { 'include': '#keywords' }
+  { 'include': '#separate' }
+  { 'include': '#options' }
+  { 'include': '#names' }
+]
+'repository':
+  # comments
+  'comments':
+    'patterns': [
+      {
+        'comment': 'Comment line'
+        'begin': '^[$]'
+        'end': '(?=\\n)'
+        'name': 'comment.line.c.lsdyna'
+      }
+    ]
+  # numbers:
+  'numbers':
+    'patterns': [
+      {
+        'comment': 'Numeric type'
+        'name': 'constant.numeric.lsdyna'
+        'match': '(\\.\\d)|(?ix)[\\+\\-]?\\b(\\d+\\.?\\d*|\\.\\d+)(d[\\+\\-]?\\d+|e[\\+\\-]?\\d+(_\\w+)?)?(?![a-z_])'
+      }
+    ]
+  # separate
+  'separate':
+   'patterns': [
+     {
+      'comment': 'LS-DYNA separate'
+      'name': 'keyword.operator.other.matlab'
+      'begin': '\\_|\\,'
+      'end': '(?=\\w|\\s)'
+      }
+    ]
+  # keywords
+  'keywords':
+   'patterns': [
+     {
+      'comment': 'LS-DYNA keywords'
+      'name': 'keyword.other.lsdyna'
+      'begin': '^[*]'
+      'end': '(?=\\,|\\n|_)'
+      }
+    ]
+  # options
+  'options':
+   'patterns': [
+     {
+      'comment': 'options'
+      'name': 'entity.name.function.lsdyna'
+      'begin': '(?<=\\_)\\w'
+      'end': '(?=\\_|\\n|\\,)'
+      }
+    ]
+  # names
+  'names':
+   'patterns': [
+     {
+      'comment': 'name'
+      'name': 'string.interpolated.lsdyna'
+      'begin': '\\S'
+      'end': '\\n'
+      }
+    ]
