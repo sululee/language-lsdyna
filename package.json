@@ -1,0 +1,20 @@
+{
+  "dependencies": {},
+  "description": "lsdyna language support for Atom",
+  "devDependencies": {},
+  "engines": {"atom": ">=1.0.0 <2.0.0"},
+  "homepage": "https://github.com/sululee/language-lsdyna#readme",
+  "keywords": [
+    "lsdyna"
+  ],
+  "license": "MIT",
+  "name": "language-lsdyna",
+  "optionalDependencies": {},
+  "readme": "# lsdyna language support for Atom",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sululee/language-lsdyna.git"
+  },
+  "version": "0.0.0"
+}
