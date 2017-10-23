@@ -7,11 +7,11 @@
   },
   "homepage": "https://github.com/sululee/language-lsdyna#readme",
   "keywords": [
-    "lsdyna"
-    "LS-DYNA"
-    "FEA"
-    "FEM"
-    "CAE"
+    "lsdyna",
+    "LS-DYNA",
+    "FEA",
+    "FEM",
+    "CAE",
   ],
   "license": "MIT",
   "name": "language-lsdyna",
