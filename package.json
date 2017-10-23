@@ -16,7 +16,12 @@
   "license": "MIT",
   "name": "language-lsdyna",
   "optionalDependencies": {},
-  "readme": "# lsdyna language support for Atom",
+  "readme": "# language LS-DYNA package for Atom\n
+  Syntax highlighting for keywords and comments for LS-DYNA Keyword-files.\n
+  ## Sample\n
+  ![Sample file](https://raw.githubusercontent.com/sululee/language-lsdyna/master/Preview_language-lsdyna.png)\n
+  ## Author\n
+  * [Xinyang Li](https://github.com/sululee)",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
