@@ -20,7 +20,7 @@
       {
         'comment': 'Comment line'
         'begin': '^[$]'
-        'end': '(?=\\n)'
+        'end': '(?=\\n|\\r)'
         'name': 'comment.line.c.lsdyna'
       }
     ]
@@ -39,7 +39,7 @@
      {
       'comment': 'LS-DYNA separate'
       'name': 'keyword.operator.other.matlab'
-      'begin': '\\_|\\,'
+      'begin': '_|\\,'
       'end': '(?=\\w|\\s)'
       }
     ]
@@ -50,7 +50,7 @@
       'comment': 'LS-DYNA keywords type'
       'name': 'keyword.other.lsdyna'
       'begin': '^[*]'
-      'end': '(?=\\,|\\n|_)'
+      'end': '(?=\\,|\\n|\\_|\\r|[ ])'
       }
     ]
   # posterior_keywords_and_options
@@ -59,18 +59,17 @@
      {
       'comment': 'posterior keywords and options'
       'name': 'entity.name.function.lsdyna'
-      'begin': '(?<=\\w\\_)\\w'
-      'end': '(?=\\_|\\n)'
+      'begin': '(?<=_)\\w'
+      'end': '(?=\\_|\\n|\\r|[ ])'
       }
     ]
-  # options with bracket
+  # suboptions_with_bracket
   'suboptions_with_bracket':
    'patterns': [
      {
       'comment': 'suboptions with bracket'
-      'name': 'entity.name.function.lsdyna'
-      'begin': '(?<=\\w\\_)\\{'
-      'end': '\\}(?=\\n)'
+      'name': 'variable.other.function.lsdyna'
+      'match': '(?<=\\{)\\w*(?=\\})'
       }
     ]
   # names
@@ -79,7 +78,7 @@
      {
       'comment': 'name'
       'name': 'string.interpolated.lsdyna'
-      'begin': '\\S'
-      'end': '\\n'
+#      'match': '(^(?=[\\S])[^\\$\\*\\,\\{\\}\\<\\>\\(\\)\\%\\&\\?\\!\\#\\.\\@0-9]\\w*)|(\\s(?=[\\S])[^\\$\\*\\,\\{\\}\\<\\>\\(\\)\\%\\&\\?\\!\\#\\.\\@0-9]\\w*)'
+      'match': '(^(?=[\\S])[^\\$\\*\\,\\{\\}\\<\\>\\(\\)\\%\\&\\?\\!\\#\\.\\@0-9][\\w[ ]]*$)'
       }
     ]
